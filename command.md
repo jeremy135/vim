@@ -1,3 +1,5 @@
-$ - End of file
+$ - End of line
+
+G - End of file
 
 ZZ - save & exit
