@@ -69,6 +69,7 @@ set nostartofline
 " Ignore case in search patterns
 set ignorecase
 " Add full file path to your existing statusline
+set laststatus=2
 set statusline+=%f
 
 set foldmethod=syntax
