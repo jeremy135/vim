@@ -23,9 +23,10 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 Plugin 'Quramy/tsuquyomi'
+Plugin 'wincent/command-t'
 " All of your Plugins must be added before the following line
 
 call vundle#end()            " required
@@ -82,14 +83,17 @@ set foldlevel=20
 set clipboard+=unnamed  " use the clipboards of vim and win
 set go+=a               " Visual selection automatically copied to the clipboard
 
+"keep swap files in one place
 set dir=$HOME/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 let g:javascript_enable_domhtmlcss = 1
 " Show a vertical line on a 80th character
-"set textwidth=80
-"set colorcolumn=+1
-"highlight ColorColumn ctermbg=DarkGrey
+set colorcolumn=120
+highlight ColorColumn ctermbg=DarkGrey
+
+"recolor errors in checkers
+highlight SpellBad ctermbg=DarkGrey  
 color monokai
 " JSX syntax ext jsx
 let g:jsx_ext_required = 0
@@ -102,7 +106,7 @@ autocmd FileType typescript :set makeprg=tsc
 let g:syntastic_javascript_checkers = ['gjslint', 'jsxhint']
 "typescript checkers
 "let g:tsuquyomi_disable_quickfix = 1
-"let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tsc', 'tslint']
 " for CPP autocomplete
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 "let g:ycm_filetype_whitelist = { '*.ts': 1, 'css': 1, 'html': 1, 'sass': 1, 'json': 1 }
@@ -114,3 +118,5 @@ let NERDTreeIgnore = ['\.js.map$']
 "  let g:ycm_semantic_triggers = {}
 "endif
 "let g:ycm_semantic_triggers['typescript'] = ['.']
+"commandt ignore dirs
+:set wildignore+=node_modules
