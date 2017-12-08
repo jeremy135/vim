@@ -11,9 +11,10 @@ call vundle#begin()
 " My bundles here:
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'fatih/vim-go'
-Plugin 'digitaltoad/vim-jade'
+"Plugin 'fatih/vim-go'
+"Plugin 'digitaltoad/vim-jade'
 Plugin 'mxw/vim-jsx'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'elzr/vim-json'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'scrooloose/syntastic'
@@ -23,7 +24,14 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'jparise/vim-graphql'
+"Plugin 'mhartington/vim-angular2-snippets'
+"Plugin 'magarcia/vim-angular2-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 Plugin 'Quramy/tsuquyomi'
 Plugin 'wincent/command-t'
@@ -120,3 +128,12 @@ let NERDTreeIgnore = ['\.js.map$']
 "let g:ycm_semantic_triggers['typescript'] = ['.']
 "commandt ignore dirs
 :set wildignore+=node_modules
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+

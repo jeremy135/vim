@@ -1,6 +1,6 @@
 [user]
-  name = Vladimir Lezhnin
-  email = v.lezhnin@ispsystem.com
+	name = Vladimir Lezhnin
+	email = v.lezhnin@ispsystem.com
 [alias]
   co = checkout
   ci = commit
@@ -13,9 +13,10 @@
   lg = !"git lg2"
 [push]
   default = simple
-
 [color]
   diff = auto
   status = auto
   branch = auto
   interactive = auto
+[core]
+	editor = vim
