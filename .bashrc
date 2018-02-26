@@ -25,6 +25,9 @@
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
 
+VIMRUNTIME=/usr/bin
+EDITOR=/usr/bin/vim
+
 test -s ~/.alias && . ~/.alias || true
 ###-begin-bem-completion-###
 #
@@ -82,7 +85,7 @@ alias ccat='pygmentize -g'
 alias ls='ls -alh --color'
 
 printf "\e[?2004l"
-[2K[1G[?25hThe option '--bash' is not registered with the completion command. Run `ng completion --help` for a list of supported options.
+# The option '--bash' is not registered with the completion command. Run `ng completion --help` for a list of supported options.
 ###-begin-ng-completion###
 #
 # ng command completion script

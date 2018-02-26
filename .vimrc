@@ -25,7 +25,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jparise/vim-graphql'
-"Plugin 'mhartington/vim-angular2-snippets'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mhartington/vim-angular2-snippets'
 "Plugin 'magarcia/vim-angular2-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
 " Track the engine.
@@ -87,6 +89,8 @@ set statusline+=%f
 
 set foldmethod=syntax
 set foldlevel=20
+
+set mouse=a " support mouse
 
 set clipboard+=unnamed  " use the clipboards of vim and win
 set go+=a               " Visual selection automatically copied to the clipboard
