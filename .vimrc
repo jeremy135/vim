@@ -5,18 +5,19 @@ set t_Co=256
 
 set rtp+=~/.vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 "" let Vundle manage Vundle, required
 call vundle#begin()
 " My bundles here:
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'fatih/vim-go'
-"Plugin 'digitaltoad/vim-jade'
+" Plugin 'fatih/vim-go'
+" Plugin 'digitaltoad/vim-jade'
 Plugin 'mxw/vim-jsx'
 Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'elzr/vim-json'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'sickill/vim-monokai'
 Plugin 'pangloss/vim-javascript'
@@ -24,12 +25,15 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jparise/vim-graphql'
+Plugin 'csscomb/vim-csscomb'
+" Plugin 'jparise/vim-graphql'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mhartington/vim-angular2-snippets'
-"Plugin 'magarcia/vim-angular2-snippets'
-"Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Quramy/vim-js-pretty-template'
+" Plugin 'mhartington/vim-angular2-snippets'
+Plugin 'jeremy135/vim-angular2-snippets'
+" Plugin 'magarcia/vim-angular2-snippets'
+" Plugin 'terryma/vim-multiple-cursors'
 " Track the engine.
 Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
@@ -105,16 +109,20 @@ set colorcolumn=120
 highlight ColorColumn ctermbg=DarkGrey
 
 "recolor errors in checkers
-highlight SpellBad ctermbg=DarkGrey  
+highlight SpellBad ctermbg=DarkGrey
 color monokai
 " JSX syntax ext jsx
 let g:jsx_ext_required = 0
 " Don't show pair brackets
 let loaded_matchparen = 0
 autocmd FileType sass setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType typescript :set makeprg=tsc
+autocmd FileType javascript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
 let g:syntastic_javascript_checkers = ['gjslint', 'jsxhint']
 "typescript checkers
 "let g:tsuquyomi_disable_quickfix = 1
@@ -140,4 +148,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+" fix https://github.com/hail2u/vim-css3-syntax
+augroup VimCSS3Syntax
+  autocmd!
 
+  autocmd FileType css setlocal iskeyword+=-
+augroup END

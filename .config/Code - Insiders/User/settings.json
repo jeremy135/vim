@@ -1,0 +1,6 @@
+{
+    "typescript.extension.sortImports.sortMethod": "path",
+    "typescript.extension.sortImports.pathSortOrder": ["package", "relativeDownLevel", "relativeUpLevel"],
+    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.tabSize": 2
+}

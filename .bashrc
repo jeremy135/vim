@@ -79,7 +79,17 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
-export PATH=$PATH:"$HOME/.npm/bin"
+export NPM_PACAKGES="$HOME/.npm"
+
+export PATH="$NPM_PACAKGES/bin:$PATH"
+
+unset MANPATH
+
+export MANPATH="$NPM_PACAKGES/share/man:$(manpath)"
+
+export NODE_PATH="$NPM_PACAKGES/lib/node_modules:$NODE_PATH"
+# for isp_service
+export DHOST=188.120.252.210
 
 alias ccat='pygmentize -g'
 alias ls='ls -alh --color'
