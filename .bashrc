@@ -79,7 +79,7 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
-export NPM_PACAKGES="$HOME/.npm"
+export NPM_PACAKGES="$HOME/.npm-packages"
 
 export PATH="$NPM_PACAKGES/bin:$PATH"
 

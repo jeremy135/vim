@@ -1,8 +1,6 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set t_Co=256
-
 set rtp+=~/.vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin('~/some/path/here')
@@ -19,13 +17,17 @@ Plugin 'elzr/vim-json'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'sickill/vim-monokai'
+" Plugin 'sickill/vim-monokai'
+" Plugin 'sonph/onehalf'
+" Plugin 'fenetikm/falcon'
+" Plugin 'dikiaap/minimalist'
+Plugin 'mhartington/oceanic-next'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'csscomb/vim-csscomb'
+" Plugin 'csscomb/vim-csscomb'
 " Plugin 'jparise/vim-graphql'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -63,7 +65,6 @@ call vundle#end()            " required
 "color mango
 "set smarttab
 set list
-syntax on
 set backspace=2 " make backspace work like most other apps
 set tabstop=2
 " Enable smart indent. it add additional indents whe necessary
@@ -99,18 +100,30 @@ set mouse=a " support mouse
 set clipboard+=unnamed  " use the clipboards of vim and win
 set go+=a               " Visual selection automatically copied to the clipboard
 
-"keep swap files in one place
+" keep swap files in one place
 set dir=$HOME/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 let g:javascript_enable_domhtmlcss = 1
 " Show a vertical line on a 80th character
 set colorcolumn=120
-highlight ColorColumn ctermbg=DarkGrey
 
-"recolor errors in checkers
-highlight SpellBad ctermbg=DarkGrey
-color monokai
+" Theme 
+"color monokai
+syntax on
+" for vim 7
+set t_Co=256
+
+" for vim 8
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
+let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+
 " JSX syntax ext jsx
 let g:jsx_ext_required = 0
 " Don't show pair brackets
