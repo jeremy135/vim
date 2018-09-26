@@ -136,6 +136,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType typescript :set makeprg=tsc
 autocmd FileType javascript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
+au BufRead,BufNewFile *.sass set filetype=css
+au BufRead,BufNewFile *.scss set filetype=css
 let g:syntastic_javascript_checkers = ['gjslint', 'jsxhint']
 "typescript checkers
 "let g:tsuquyomi_disable_quickfix = 1
