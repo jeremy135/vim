@@ -13,5 +13,8 @@ bower_components
 .ssh
 .Trash
 .npm
+.npm-global
 .DS_Store
+.node-gyp
+.bash_sessions
 
