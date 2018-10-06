@@ -18,3 +18,13 @@ bower_components
 .node-gyp
 .bash_sessions
 .local
+.config
+.cache
+.gem
+.iterm2
+.pm2
+.vim
+.vscode
+.Tribler
+.VSCodeVim
+.oh-my-zsh
