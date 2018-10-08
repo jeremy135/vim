@@ -26,7 +26,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe', {'do': './install.py --tern-completer --clang-completer --js-completer'}
 " Plugin 'csscomb/vim-csscomb'
 " Plugin 'jparise/vim-graphql'
 Plugin 'vim-airline/vim-airline'

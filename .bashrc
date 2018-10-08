@@ -92,7 +92,7 @@ export NODE_PATH="$NPM_PACAKGES/lib/node_modules:$NODE_PATH"
 export DHOST=188.120.252.210
 
 alias ccat='pygmentize -g'
-alias ls='ls -alh --color'
+alias ls='ls -alh'
 
 printf "\e[?2004l"
 # The option '--bash' is not registered with the completion command. Run `ng completion --help` for a list of supported options.
@@ -184,3 +184,4 @@ fi
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
