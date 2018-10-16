@@ -136,6 +136,11 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType typescript :set makeprg=tsc
 autocmd FileType javascript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
+" run nerdTree when run
+autocmd VimEnter * NERDTree
+" move cursor to main window
+autocmd VimEnter * wincmd p
+
 au BufRead,BufNewFile *.sass set filetype=css
 au BufRead,BufNewFile *.scss set filetype=css
 let g:syntastic_javascript_checkers = ['gjslint', 'jsxhint']
