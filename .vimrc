@@ -38,6 +38,7 @@ Plugin 'jeremy135/vim-angular2-snippets'
 " Plugin 'terryma/vim-multiple-cursors'
 " Track the engine.
 Plugin 'SirVer/ultisnips'
+Plugin 'digitaltoad/vim-pug'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}

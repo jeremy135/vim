@@ -6,6 +6,14 @@ export ZSH="/Users/jeremy/.oh-my-zsh"
 
 export PATH=/Users/jeremy/Library/Python/2.7/bin
 
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 export PATH=~/.npm-global/bin:$PATH
 
 export PATH=$PATH:/bin:/usr/bin

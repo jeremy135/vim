@@ -79,15 +79,15 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
-export NPM_PACAKGES="$HOME/.npm-packages"
+export NPM_PACKAGES="$HOME/.npm-packages"
 
-export PATH="$NPM_PACAKGES/bin:$PATH"
+export PATH="$NPM_PACKAGES/bin:$PATH"
 
 unset MANPATH
 
-export MANPATH="$NPM_PACAKGES/share/man:$(manpath)"
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-export NODE_PATH="$NPM_PACAKGES/lib/node_modules:$NODE_PATH"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # for isp_service
 export DHOST=188.120.252.210
 

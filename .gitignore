@@ -28,3 +28,4 @@ bower_components
 .Tribler
 .VSCodeVim
 .oh-my-zsh
+node_modules
