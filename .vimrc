@@ -150,6 +150,8 @@ let g:syntastic_javascript_checkers = ['gjslint', 'jsxhint']
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'tsc', 'tslint']
 " for CPP autocomplete
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+let g:vim_json_warnings=1
 "let g:ycm_filetype_whitelist = { '*.ts': 1, 'css': 1, 'html': 1, 'sass': 1, 'json': 1 }
 "NerdTree
 "let NERDTreeIgnore = ['\.js$', '\.js.map$']
